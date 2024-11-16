@@ -1,0 +1,10 @@
+<div *ngIf="loading">Loading products...</div>
+<div *ngIf="!loading && products.length === 0">No products found.</div>
+
+<ul *ngIf="!loading && products.length > 0">
+  <li *ngFor="let product of products">
+    <strong>{{ product.name }}</strong><br>
+    Price: ${{ product.price }}
+  </li>
+</ul>
+
